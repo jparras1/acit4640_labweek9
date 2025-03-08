@@ -10,9 +10,13 @@
 
 > packer build packer/
 4. Create the EC2 instances
-> terraform init terraform/
+- change directory to the terraform file (main.tf)
+> cd terraform
 
-> terraform apply terraform/
+Then enter the following:
+> terraform init
+
+> terraform apply
 5. At the end of the terraform execution information, you should receive a dns name and an ip address. Use either one to go to the website:
 ![alt text](image.png)
 
@@ -25,9 +29,9 @@ Then fix the formatting of the packer .hcl file
 > packer fmt packer/
 
 Then build the AMI again using the commands from step 3 above
-2. If your EC2 instances did not get created, enter the command below to see the error:
-> terraform validate terraform/
+2. If your EC2 instances did not get created, enter the command below to see the error (make sure you're in the proper directory):
+> terraform validate
 
-> terraform fmt terraform/
+> terraform fmt
 
 Then create the instances again with step 4
