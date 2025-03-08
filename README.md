@@ -30,6 +30,7 @@ Then fix the formatting of the packer .hcl file
 > packer fmt packer/
 
 Then build the AMI again using the commands from step 3 above
+
 2. If your EC2 instances did not get created, enter the command below to see the error (make sure you're in the proper directory):
 > terraform validate
 
