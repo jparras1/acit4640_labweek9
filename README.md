@@ -1,10 +1,11 @@
 # 4640-w9-lab-start-w25
 
 ## To deploy the AWS EC2 instance using the custom Nginx configurations, run the following commands for quick deployment:
+Note: Ensure you are in the root directory of the project when running these commands (in this case: "4640-w9-lab-start-w25")
 1. Generate ssh keys
-> ssh-keygen -t ed25519 -f .ssh/<name_of_key>
+> ssh-keygen -t ed25519 -f ~/.ssh/<name_of_key>
 2. Import public key to AWS
-> sh ./scripts/import_lab_key .ssh/<name_of_key>.pub
+> sh ./scripts/import_lab_key ~/.ssh/<name_of_key>.pub
 3. Build the AMI
 > packer init packer/
 
@@ -35,3 +36,6 @@ Then build the AMI again using the commands from step 3 above
 > terraform fmt
 
 Then create the instances again with step 4
+
+EC2 Instance created:
+![alt text](image-1.png)

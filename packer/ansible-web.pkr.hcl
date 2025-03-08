@@ -44,7 +44,7 @@ build {
   ]
 
   provisioner "ansible" {
-	    playbook_file = "../ansible/playbook.yml"
+	    playbook_file = "./ansible/playbook.yml"
       user = var.ssh_username
 
       ansible_env_vars = ["ANSIBLE_HOST_KEY_CHECKING=False", "ANSIBLE_NOCOWS=1"]
